@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card-Interact</title>
+
+    <!-- tailwind and daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
-    <script src="./JS/index.js"></script>    
+
+<body class=" font-poppins m-0">
+    <section class="">
+        <div class=" w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5 mt-12">
+            <div class="shadow-xl rounded-2xl">
+                <img src="/images/shoes.jpg" alt="Shoes" class="rounded-xl px-10 pt-5" />
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl font-bold">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h3 class="text-lg font-bold"> Price : 50 $</h3>
+                    <button onclick="addToCart(this)" class=" bg-blue-700 px-3 py-2 text-lg text-white font-medium rounded-lg hover:bg-blue-900 transition-all duration-600">Add To Cart</button>
+                </div>
+            </div>
+            <div class="shadow-xl rounded-2xl">
+                <img src="/images/t-shirt.jpg" alt="Shoes" class="rounded-lg px-10 pt-5" />
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl font-bold"> T-Shirt</h2>
+                    <p>If a dog chews shoes whose T-Shirt does he choose?</p>
+                    <h3 class="text-lg font-bold"> Price : 70 $</h3>
+                    <button onclick="addToCart(this)" class=" bg-blue-700 px-3 py-2 text-lg text-white font-medium rounded-lg hover:bg-blue-900 transition-all duration-600">Add To Cart</button>
+                </div>
+            </div>
+            <div class="shadow-xl rounded-2xl">
+                <img src="/images/formal-pant.jpg" alt="Shoes" class="rounded-lg px-10 pt-5" />
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl font-bold">Stylish Pant</h2>
+                    <p>If a dog chews shoes whose Stylish Pant does he choose?</p>
+                    <h3 class="text-lg font-bold"> Price : 120 $</h3>
+                    <button onclick="addToCart(this)" class=" bg-blue-700 px-3 py-2 text-lg text-white font-medium rounded-lg hover:bg-blue-900 transition-all duration-600">Add To Cart</button>
+                </div>
+            </div>
+            <div class="shadow-xl rounded-2xl">
+                <img src="/images/panjabi.jpg" alt="Shoes" class="rounded-xl px-10 pt-5" />
+                <div class="card-body items-center text-center">
+                    <h2 class="text-2xl font-bold">Stylis Panjabi</h2>
+                    <p>If a dog chews whose Stylis Panjabi does he choose?</p>
+                    <h3 class="text-lg font-bold"> Price : 150 $</h3>
+                    <button onclick="addToCart(this)" class=" bg-blue-700 px-3 py-2 text-lg text-white font-medium rounded-lg hover:bg-blue-900 transition-all duration-600">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class=" w-10/12 mx-auto mt-8 flex justify-around">
+            <div id="item-list">
+                <h1 class=" text-2xl font-bold"> # Item List # </h1>
+            </div>
+            <div class=" text-center">
+                <h1 class="text-3xl  font-bold"> Calculate Prize </h1>
+                <h4 class="text-xl font-medium my-1"> Total : <span id="calculate"> 00 </span> $</h4>
+                <h4 class="text-xl font-medium"> Discount : 20 % </h4>
+                <hr class="w-48 mx-auto my-2 border-black">
+                <h3 class="text-xl font-medium my-1"> Grand Total : <span id="final-price"> 00 </span> $</h3>
+            </div>
+        </div>
+    </section>
+    <script src="./JS/index.js"></script>
 </body>
+
 </html>
